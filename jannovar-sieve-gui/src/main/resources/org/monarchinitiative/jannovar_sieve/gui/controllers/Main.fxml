@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" fitToHeight="true" fitToWidth="true"
+            xmlns="http://javafx.com/javafx/8.0.172-ea"
+            fx:controller="org.monarchinitiative.jannovar_sieve.gui.controllers.MainController">
+    <content>
+        <GridPane hgap="5.0" vgap="5.0">
+            <columnConstraints>
+                <ColumnConstraints minWidth="150.0"/>
+                <ColumnConstraints halignment="CENTER" minWidth="300.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="40.0"/>
+                <RowConstraints minHeight="40.0"/>
+                <RowConstraints minHeight="40.0"/>
+                <RowConstraints/>
+                <RowConstraints minHeight="40.0"/>
+                <RowConstraints minHeight="30.0" prefHeight="30.0"/>
+                <RowConstraints minHeight="30.0" prefHeight="30.0"/>
+                <RowConstraints minHeight="40.0" prefHeight="40.0"/>
+                <RowConstraints minHeight="40.0"/>
+                <RowConstraints/>
+                <RowConstraints minHeight="40.0"/>
+            </rowConstraints>
+            <children>
+                <Label text="Select Jannovar Transcript Database:" GridPane.columnSpan="2147483647"
+                       GridPane.halignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Button fx:id="browseButton" minHeight="30.0" minWidth="120.0" mnemonicParsing="false"
+                        onAction="#browseButtonAction" text="Browse" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <Label text="Status:" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="status" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="3"/>
+                <Label text="Select genes:" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER"
+                       GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </Label>
+                <TextField fx:id="geneTextField" promptText="e.g. GCK" GridPane.rowIndex="6">
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <Button fx:id="addButton" minHeight="30.0" minWidth="120.0" mnemonicParsing="false"
+                        onAction="#addButtonAction" text="Add" GridPane.halignment="CENTER" GridPane.rowIndex="7"/>
+                <Button fx:id="removeButton" minHeight="30.0" minWidth="120.0" mnemonicParsing="false"
+                        onAction="#removeButtonAction" text="Remove" GridPane.halignment="CENTER" GridPane.rowIndex="8"
+                        GridPane.valignment="BOTTOM"/>
+                <ListView fx:id="geneNamesListView" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.rowSpan="3">
+                    <GridPane.margin>
+                        <Insets left="5.0" right="5.0"/>
+                    </GridPane.margin>
+                </ListView>
+                <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="9"/>
+                <Button fx:id="saveSelectionButton" minHeight="30.0" minWidth="120.0" mnemonicParsing="false"
+                        onAction="#saveSelectionButtonAction" text="Save" GridPane.columnSpan="2147483647"
+                        GridPane.halignment="CENTER" GridPane.rowIndex="10">
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </Button>
+                <Label text="Selected genes:" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                       GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Italic" size="13.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </Label>
+            </children>
+        </GridPane>
+    </content>
+</ScrollPane>
