@@ -7,7 +7,7 @@
     <groupId>org.monarchinitiative.jannovar-sieve</groupId>
     <artifactId>JannovarSieve</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <modules>
         <module>jannovar-sieve-gui</module>
     </modules>
@@ -19,8 +19,6 @@
         <jannovar.version>0.27</jannovar.version>
         <junit.version>4.12</junit.version>
         <slf4j.version>1.7.25</slf4j.version>
-
     </properties>
-
 
 </project>
