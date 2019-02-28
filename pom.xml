@@ -7,7 +7,7 @@
     <groupId>org.monarchinitiative.jannovar-sieve</groupId>
     <artifactId>JannovarSieve</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <modules>
         <module>jannovar-sieve-gui</module>
     </modules>
@@ -15,7 +15,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <jdk.version>1.8</jdk.version>
+        <jdk.version>11</jdk.version>
         <jannovar.version>0.27</jannovar.version>
         <junit.version>4.12</junit.version>
         <slf4j.version>1.7.25</slf4j.version>

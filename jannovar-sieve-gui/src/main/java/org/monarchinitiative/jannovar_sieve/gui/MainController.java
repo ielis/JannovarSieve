@@ -1,9 +1,8 @@
-package org.monarchinitiative.jannovar_sieve.gui.controllers;
+package org.monarchinitiative.jannovar_sieve.gui;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.ImmutableSet;
-import com.google.inject.Inject;
 import de.charite.compbio.jannovar.data.JannovarData;
 import de.charite.compbio.jannovar.data.JannovarDataSerializer;
 import de.charite.compbio.jannovar.data.SerializationException;
@@ -18,6 +17,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import org.controlsfx.control.textfield.AutoCompletionBinding;
+import org.monarchinitiative.jannovar_sieve.gui.util.Deserializer;
 import org.monarchinitiative.jannovar_sieve.gui.util.PopUps;
 import org.monarchinitiative.jannovar_sieve.gui.util.WidthAwareTextFields;
 
@@ -53,7 +53,6 @@ public class MainController {
 
     private ObjectProperty<JannovarData> jannovarDataProperty = new SimpleObjectProperty<>();
 
-    @Inject
     public MainController(ExecutorService executorService) {
         this.executorService = executorService;
     }

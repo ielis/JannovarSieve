@@ -1,4 +1,4 @@
-package org.monarchinitiative.jannovar_sieve.gui.controllers;
+package org.monarchinitiative.jannovar_sieve.gui.util;
 
 import de.charite.compbio.jannovar.data.JannovarData;
 import de.charite.compbio.jannovar.data.JannovarDataSerializer;
@@ -27,7 +27,7 @@ public class Deserializer extends Task<Void> {
         JannovarDataSerializer serializer = new JannovarDataSerializer(dbPath.getAbsolutePath());
         jannovarData = serializer.load();
 
-        updateMessage("Success!");
+        updateMessage(dbPath.getName() + " deserialized successfully");
         updateProgress(1, 1);
         return null;
     }
